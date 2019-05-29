@@ -1,0 +1,60 @@
+button, .btn {
+  cursor: pointer;
+  border: none;
+  padding: 1rem 2rem .788888889rem;
+  font-weight: 500;
+  border-radius: 0;
+  color: white;
+  font-size: 1.25rem;
+}
+
+.btn-primary {
+  @extend .btn;
+  background-color: $primary;
+
+  &:hover {
+    background-color: darken($primary, 5%);
+  }
+
+  &:active {
+    background-color: darken($primary, 10%) !important;
+  }
+}
+
+.btn-secondary {
+  @extend .btn;
+  background-color: $secondary;
+
+  &:hover {
+    color: white;
+    background-color: darken($secondary, 5%);
+  }
+
+  &:active {
+    color: white;
+    background-color: darken($secondary, 10%) !important;
+  }
+}
+
+.primary-btnwrap {
+  .wp-block-button__link {
+    @extend .btn;
+    @extend .btn-primary;
+  }
+}
+
+.secondary-btnwrap {
+  .wp-block-button__link {
+    @extend .btn;
+    @extend .btn-secondary;
+  }
+}
+
+.wp-block-button__link {
+  @extend .btn;
+  @extend .btn-primary;
+}
+
+.is-style-squared .wp-block-button__link {
+  @extend .btn;
+}

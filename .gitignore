@@ -1,0 +1,14 @@
+vendor
+node_modules
+.DS_Store
+.bin
+.idea
+.env*
+!.env.example
+.sass-cache
+tmp*
+dist/
+
+public/wordpress
+public/latest.zip
+src/plugins/*

@@ -1,0 +1,376 @@
+// more general
+
+.parent-relative {
+  position: relative;
+}
+
+// page-template specific
+.goto-arrow-svg {
+  width: 54px;
+  @include media-breakpoint-up(xl) {
+    width: 76px;
+  }
+}
+
+.bg-cover {
+  background-position: center center;
+  background-size: cover;
+}
+
+.newslettersignup-wrapper {
+  padding: $spacer $spacer $spacer*.5;
+  background-color: lighten($primary, 65%);
+  border: 1px solid lighten($primary, 55%);
+  border-radius: $spacer/2;
+  @include media-breakpoint-up(sm) {
+    padding: $spacer $spacer*1.5 $spacer*.5;
+  }
+}
+
+
+// front-page.php blog/event listing
+
+.frontpagecards-events {
+  .card {
+    box-shadow: 0px 15px 50px 0px rgba(0, 0, 0, 0.16);
+    border: none;
+    padding: $spacer*.75 0 0;
+    position: relative;
+  }
+
+  .card-img-top {
+    padding: 0 $spacer;
+  }
+
+  .card-body {
+    padding: $spacer;
+
+    a {
+      color: $body-color;
+      font-weight: 700;
+
+      i {
+        margin-left: .7rem;
+      }
+    }
+  }
+
+  .card-dateblock {
+    border: 8px solid white;
+    color: white;
+    line-height: 1;
+    background-color: $tertiary;
+    position: absolute;
+    top: -18px;
+    right: -16px;
+    font-size: 1.444444444rem; //26px
+    width: 105px;
+    height: 114px;
+
+    span {
+      font-size: 2.888888889rem; //52
+      font-weight: 700;
+      display: block;
+    }
+  }
+
+  .card-timeblock {
+    background-color: $body-color;
+    color: white;
+    padding: $spacer*.5 $spacer;
+
+    i {
+      margin-right: .5rem;
+    }
+  }
+}
+
+// single.php
+
+.eventsingleimg-wrapper {
+  position: relative;
+
+  .card-dateblock {
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05);
+    border: 8px solid white;
+    color: white;
+    line-height: 1;
+    background-color: $tertiary;
+    position: absolute;
+    top: -18px;
+    right: -16px;
+    font-size: 1.444444444rem; //26px
+    width: 105px;
+    height: 114px;
+
+    span {
+      font-size: 2.888888889rem; //52
+      font-weight: 700;
+      display: block;
+    }
+
+    @include media-breakpoint-up(md) {
+      top: 0px;
+      left: 0;
+      font-size: 2.666666667rem; //48px
+      width: 198px;
+      height: 215px;
+      span {
+        font-size: 5.444444444rem; //98rem
+      }
+    }
+  }
+}
+
+// ----- Owl-carousel -----
+
+.owl-carousel {
+  margin-bottom: 10px;
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+}
+
+.owl-theme .owl-nav {
+  position: absolute;
+  top: 35%;
+  top: calc(50% - 25px);
+  color: white;
+  font-size: 60px;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    min-width: auto;
+    outline: none;
+  }
+}
+
+$owl-btn: 60px;
+$owl-col: $quinary;
+$owl-lgg: lighten($owl-col,10%);
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  width: $owl-btn;
+  height: $owl-btn;
+  border-radius: 0;
+  margin-top: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  &:hover {
+    background-color: $owl-lgg;
+  }
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  background: $owl-col url('../images/arrows.png') no-repeat center left;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  background: $owl-col url('../images/arrows.png') no-repeat center right;
+}
+
+.owl-dots {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2rem;
+
+  button {
+    margin-bottom: 0;
+    margin-top: 1rem;
+    outline: none;
+    min-width: auto;
+    min-width: auto;
+    width: auto;
+  }
+}
+
+$dot-size: 14px;
+
+.owl-carousel button.owl-dot {
+  width: $dot-size;
+  height: $dot-size;
+  border: 1px solid $owl-col;
+  border-radius: 50%;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+button.owl-dot.active {
+  background-color: $owl-col;
+}
+
+// gutenberg overrides
+.wp-block-column {
+  margin-bottom: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (max-width: 782px) {
+  .wp-block-column {
+    flex-basis: 100%;
+  }
+}
+
+// contact-page table
+td {
+  vertical-align: top;
+}
+
+// contact-page ifram map
+iframe {
+  border: 1px solid #f8f9fa;
+}
+
+// full hero
+
+#fullHero {
+  @media only screen and (min-device-height: 800px) and (max-device-width: 1280px) {
+    .hero--content {
+      padding-top: $spacer*2;
+    }
+  }
+  @media only screen and (min-device-height: 900px) and (max-device-width: 1440px) {
+    .hero--content {
+      padding-top: $spacer*3;
+    }
+  }
+
+  .block-fill-height {
+    height: 100vh;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .hero--section {
+    position: relative;
+    width: 100%;
+    padding: 6rem 0;
+    color: inherit;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #logoLeftButtonsRight .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: #fff;
+  }
+
+  .header-anchor {
+    display: block;
+    width: auto;
+    color: rgba(0, 0, 0, 0.1);
+  }
+
+  .fa-stack {
+    display: inline-block;
+    height: 2em;
+    position: relative;
+    width: 2em;
+  }
+
+  .fa-lg {
+    font-size: 1.33333em;
+    line-height: 0.75em;
+    vertical-align: -.0667em;
+  }
+
+  .svg-inline--fa.fa-w-14 {
+    width: 0.875em;
+  }
+
+  .fa-stack-1x, .fa-stack-2x {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .svg-inline--fa.fa-stack-1x {
+    height: 1em;
+    width: 1em;
+  }
+}
+
+// pingpong
+#pingPong {
+  @include media-breakpoint-up(md) {
+    & > .container {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  .section--ping-pong {
+    @include media-breakpoint-up(lg) {
+      max-width: 685px;
+    }
+  }
+}
+
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+
+ul.fa-checkicons {
+  padding: 0 0 0 .25rem;
+  font-size: 90%;
+
+  li {
+    list-style: none;
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: .5rem;
+
+    &:before {
+      content: "\f00c";
+      font-family: "Font Awesome 5 Free";
+      color: $green;
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: .25rem;
+      font-size: 80%;
+    }
+  }
+}
+
+.spr-breadcrumb {
+  font-size: 1rem;
+  color: #8a8a8a;
+  font-weight: 400;
+  a {
+    font-weight: 400;
+    color: #555;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 1.125rem;
+  }
+}

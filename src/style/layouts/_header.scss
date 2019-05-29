@@ -1,0 +1,231 @@
+// general all Navs
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+
+
+// ******* #logoLeftButtonsRight *******
+
+#logoLeftButtonsRight {
+  // opening tag
+
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-main-logo {
+    width: 180px;
+    @include media-breakpoint-up(xl) {
+      width: 266px;
+    }
+  }
+
+  #main-menu {
+
+    .nav-link {
+      text-transform: uppercase;
+      font-family: $font-family-serif;
+      font-weight: 700;
+    }
+
+    @include media-breakpoint-down(lg) {
+      .nav-link {
+        margin-left: .5rem;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      & > .nav-link {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  #mainnav {
+    .navbar-nav {
+      @include media-breakpoint-down(md) {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .navbar-light .navbar-toggler {
+    background: $secondary;
+    color: $white;
+    border: none;
+    font-size: 1.5rem;
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .navbar-nav .nav-link.dropdown-toggle {
+      padding-right: 1.5rem;
+    }
+
+    .dropdown .caret {
+      position: absolute;
+      top: 50%;
+      right: .5rem;
+      margin-top: -.6rem;
+    }
+
+    .dropdown-menu {
+      box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.25);
+      border-radius: 0;
+      border: none;
+      right: 0;
+      left: auto;
+
+      > .menu-item > .nav-link {
+        padding: .75rem 1.5rem;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+
+    .dropdown .caret {
+      display: none;
+    }
+
+    .dropdown-menu {
+      display: block;
+      text-align: center;
+
+      background: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .dropdown-toggle {
+      text-align: center;
+    }
+  }
+
+  // closing tag
+}
+
+
+
+// ******* topBarWithFullImageAndButtonsBottom *******
+
+
+#topBarWithFullImageAndButtonsBottom {
+
+  // opening tag
+
+  $top-bar-color: $tertiary;
+  $gray-brand: $quaternary;
+  $border-thickness: 10px;
+
+  .topbar {
+    background: $top-bar-color;
+    color: white;
+    font-size: 1.222222222rem;
+    line-height: 3.555555556rem;
+    .topbar__getStarted {
+      @include media-breakpoint-up(sm) {
+        display: block;
+      }
+    }
+    a {
+      color: white;
+      display: inline-block;
+    }
+    .topbar__getStarted {
+      a {
+        background-color: darken($top-bar-color, 15%);
+        font-weight: bold;
+        i {
+          padding-left: 26px;
+          font-size: 1.5rem;
+          top: 3px;
+          position: relative;
+        }
+      }
+    }
+  }
+
+  .navbar-toggler {
+    color: white;
+    font-weight: 700;
+  }
+
+  .indexhero {
+    background-color: $gray-brand;
+  }
+  #main-logo-svg {
+    width: 398px;
+    @include media-breakpoint-down(sm) {
+      height: 162px;
+    }
+  }
+  #pages-logo-svg {
+    width: 398px;
+    height: 162px;
+  }
+  #pagesHeaderLogo {
+    @include media-breakpoint-down(md) {
+      background-color: $gray-brand;
+    }
+  }
+
+  .mainMenu {
+    background-color: $gray-brand;
+
+    .container {
+      @include media-breakpoint-down(xs) {
+        max-width: none;
+        padding: 0;
+      }
+    }
+  }
+
+  .navbar-nav {
+
+    .menu-item {
+      @extend .flex-fill;
+      text-align: center;
+    }
+
+    .menu-item.active a,
+    .current-menu-ancestor.active a {
+      @include media-breakpoint-up(lg) {
+        border-bottom-color: $primary;
+      }
+      @include media-breakpoint-down(md) {
+        background-color: $primary;
+        color: white;
+      }
+    }
+
+    .nav-link {
+      font-size: 1.111111111rem;
+      color: $body-color;
+      border-bottom: $border-thickness solid transparent;
+      padding: 1.75rem 1.25rem 1.25rem 1.25rem;
+
+      &:hover {
+        border-bottom-color: $primary;
+      }
+    }
+  }
+
+  .home .mainMenu {
+    background-color: #fff;
+
+    .nav-link {
+      border-bottom-color: $white;
+    }
+  }
+
+  // closing tag
+
+}

@@ -1,0 +1,159 @@
+// Responsive font sizing
+html {
+  font-size: 18px;
+}
+
+// Sets font size to 16px on form elements to prevent input zoom on mobile devices
+@include media-breakpoint-down(sm) {
+  .form-control {
+    font-size: $font-size-base * 1.075;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: $font-family-base;
+  -webkit-overflow-scrolling: touch;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.text-primary-copy {
+  color: lighten($primary, 10%);
+
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: $headings-color;
+  }
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  font-weight: 500;
+
+  @include media-breakpoint-down(lg) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.lc-heading {
+  text-transform: none;
+}
+
+.h1, h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.h2, h2 {
+  font-size: 1.8rem;
+}
+
+.display-5 {
+  font-size: 2.65rem; //40px
+  font-weight: 700;
+  color: $body-color;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.sub-heading {
+  color: $body-color;
+  font-weight: 400;
+}
+
+.sub-heading--sm {
+  text-transform: none;
+}
+
+.blockquote, blockquote, .pull-quote {
+  padding: 1.5rem 2.5rem;
+  margin: $matrix-block-margin 0;
+  font-size: 120%;
+  border-left: 4px solid gray("300");
+  clear: both;
+}
+
+.pull-quote {
+  border: none;
+}
+
+.spaced-list {
+  padding: 0 0 0 22px;
+}
+
+.spaced-list li {
+  margin-bottom: .5rem;
+}
+
+.lead strong {
+  font-weight: 600;
+}
+
+.lead {
+  font-size: 1.5rem;
+  color: #797979;
+}
+
+.text-md {
+  font-size: 90%;
+}
+
+.list-unstyled li {
+  padding-bottom: .25rem;
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+}
+
+.list-unstyled {
+  margin-bottom: 1rem;
+}
+
+.styled-list {
+  padding: 0 0 0 .25rem;
+
+  li {
+    list-style: none;
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: .5rem;
+
+    &:before {
+      content: "\f00c";
+      font-family: "Font Awesome 5 Free";
+      color: $green;
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: .25rem;
+      font-size: 80%;
+    }
+  }
+}
+
+.col-text-2 {
+  columns: 2;
+  column-gap: 2rem;
+
+  @include media-breakpoint-down(sm) {
+    columns: 1;
+  }
+}
+
+.long-txt-fix {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
