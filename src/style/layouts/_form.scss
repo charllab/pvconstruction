@@ -40,10 +40,7 @@
     color: $danger;
     font-weight: 500;
     @media (min-width: 639.98px) {
-      max-width: 690px;
-    }
-    @include media-breakpoint-up(lg) {
-      max-width: 738px;
+      right: 8px;
     }
 
   }
@@ -53,7 +50,7 @@
     margin: 0;
     padding: 0;
     @media (min-width: 639.98px) {
-      padding-right: 16px;
+      margin-right: 16px;
     }
     border: none;
     .validation_message {
@@ -255,14 +252,6 @@ body #gform_wrapper_1 .gform_body .gform_fields .gfield {
   margin-top: 0;
 }
 
-//body #gform_wrapper_1 .gform_body .gform_fields .gfield .ginput_container_select {border: 1px solid red}
-//
-body #gform_wrapper_1 .gform_body .gform_fields .gfield .ginput_container_textarea {
-
-  @include media-breakpoint-up(sm) {
-    padding-right: 16px;
-  }
-}
 
 body #gform_wrapper_1 .gform_body .gform_fields .gfield input[type=text] {
   height: 3rem;
@@ -270,4 +259,34 @@ body #gform_wrapper_1 .gform_body .gform_fields .gfield input[type=text] {
 }
 body #gform_wrapper_1 .gform_body .gform_fields .gfield_error {
   color: $tertiary;
+}
+
+
+body #gform_wrapper_1 .gform_body .gform_fields .gfield .ginput_container_select {
+  border: 1px solid #404040;
+  height: 60px;
+  overflow: hidden;
+  outline: none;
+  select {
+    color: #495057;
+    border: 0px solid transparent;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: white;
+    height: 58px;
+    border-radius: 0;
+    width: 99.5%;
+    outline: none;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  select::-ms-expand {
+    display: none; /* hide the default arrow in ie10 and ie11 */
+  }
+  select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }
 }

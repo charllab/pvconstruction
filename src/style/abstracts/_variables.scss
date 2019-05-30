@@ -12,6 +12,7 @@ $quaternary: #ccc;
 $quinary: #999;
 $info: $tertiary;
 $danger: #f44336;
+$light: #fcfcfc;
 
 $body-color: $primary;
 $headings-color: $tertiary;
@@ -26,27 +27,27 @@ $navbar-light-active-color: $secondary;
 
 // Breakpoints
 $grid-breakpoints: (
-    xxs: 0,
-    xs: 568px,
-    sm: 667px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
-    xxl: 1440px
+    xxs:  0,
+    xs:   567.98px,
+    sm:   666.98px,
+    md:   782.98px,
+    lg:   991.98px,
+    xl:   1199.98px,
+    xxl:  1439.98px
 );
 
 $container-max-widths: (
-    xxs: 567px,
-    xs: 568px,
-    sm: 667px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
-    xxl: 1400px
+    xxs:  567px,
+    xs:   568px,
+    sm:   667px,
+    md:   768px,
+    lg:   992px,
+    xl:   1200px,
+    xxl:  1400px
 );
 
 // Spacing
-$spacer: 1.4rem;
+$spacer: 28px;
 
 $spacers: () !default;
 $spacers: map-merge((
@@ -60,7 +61,9 @@ $spacers: map-merge((
         7: ($spacer * 7),
         8: ($spacer * 8),
         9: ($spacer * 9),
-        10: ($spacer * 10)
+        10: ($spacer * 10),
+        11: ($spacer * 11),
+        12: ($spacer * 12)
 ), $spacers);
 
 
@@ -69,7 +72,7 @@ $spacers: map-merge((
 $font-family-sans-serif: 'futura-pt', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $font-family-serif: 'futura-pt-bold', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $font-family-base: $font-family-sans-serif;
-$headings-font-family: $font-family-serif;
+$headings-font-family: $font-family-sans-serif;
 
 $lead-font-size: 1.15rem;
 

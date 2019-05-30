@@ -17,6 +17,26 @@
   background-size: cover;
 }
 
+.callout__textblock {
+  p {
+    max-width: 526px;
+  }
+
+  .lead {
+    margin-bottom: $spacer*1.07;
+  }
+}
+
+.seperator__border--top {
+  border-top: 6px solid $secondary;
+}
+
+.topbanner__marginpullup--servicespage {
+  @include media-breakpoint-up(xxl) {
+    margin-bottom: -($spacer*5);
+  }
+}
+
 .newslettersignup-wrapper {
   padding: $spacer $spacer $spacer*.5;
   background-color: lighten($primary, 65%);
@@ -150,7 +170,7 @@
 
 $owl-btn: 60px;
 $owl-col: $quinary;
-$owl-lgg: lighten($owl-col,10%);
+$owl-lgg: lighten($owl-col, 10%);
 
 .owl-carousel .owl-nav button.owl-prev,
 .owl-carousel .owl-nav button.owl-next {
@@ -212,6 +232,10 @@ button.owl-dot.active {
   margin-bottom: 0;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.wp-block-image {
+  margin-bottom: 0;
 }
 
 @media (max-width: 782px) {
@@ -366,11 +390,83 @@ ul.fa-checkicons {
   font-size: 1rem;
   color: #8a8a8a;
   font-weight: 400;
+
   a {
     font-weight: 400;
     color: #555;
   }
+
   @include media-breakpoint-up(xl) {
     font-size: 1.125rem;
+  }
+}
+
+.img-left-pr {
+  @include media-breakpoint-up(md) {
+    padding-right: $spacer*1.3;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-right: $spacer*2.145;
+  }
+}
+
+.service-row {
+  margin-top: $spacer;
+
+  &:not(:last-of-type) {
+    margin-bottom: $spacer;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-top: $spacer*2.5;
+    &:not(:last-of-type) {
+      margin-bottom: $spacer*2.5;
+    }
+  }
+}
+
+.bigbox__wrapper {
+  @include media-breakpoint-between(md,xl) {
+    & > .container {
+      width: 100%;
+      max-width: none;
+    }
+  }
+}
+.bigbox__col--left {
+  @include media-breakpoint-only(md) {
+    padding-left: $spacer;
+    padding-right: $spacer;
+  }
+  @include media-breakpoint-between(lg,xxl) {
+    padding-left: $spacer*2;
+    padding-right: $spacer*2;
+  }
+  @include media-breakpoint-up(xxl) {
+    padding-right: $spacer*1.5;
+  }
+}
+.bigbox__col--right {
+  @include media-breakpoint-only(md) {
+    padding-left: $spacer;
+    padding-right: $spacer;
+  }
+  @include media-breakpoint-between(lg,xxl) {
+    padding-left: $spacer*2;
+    padding-right: $spacer*2;
+  }
+  @include media-breakpoint-up(xxl) {
+    padding-left: $spacer*4;
+    padding-right: $spacer*4;
+  }
+}
+
+.bg-watermark {
+  @include media-breakpoint-up(md) {
+    background-color: #f4f4f4;
+    background-image: url('../images/watermark-withspacingleft.svg');
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: 50%;
   }
 }

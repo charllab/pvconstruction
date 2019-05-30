@@ -34,7 +34,7 @@ body {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 1rem;
+  margin-bottom: $spacer*.57;
   line-height: 1.2;
   font-weight: 500;
 
@@ -45,23 +45,31 @@ body {
   }
 }
 
+p {
+  margin-bottom: $spacer;
+}
+
 .lc-heading {
   text-transform: none;
 }
 
 .h1, h1 {
+  font-family: $font-family-serif;
   font-size: 1.9rem;
   font-weight: 700;
+  line-height: $spacer*1.715;
 }
 
 .h2, h2 {
   font-size: 1.8rem;
+  line-height: $spacer*1.7;
 }
 
 .display-5 {
   font-size: 2.65rem; //40px
   font-weight: 700;
   color: $body-color;
+  font-family: $font-family-serif;
 }
 
 strong {
@@ -104,6 +112,8 @@ strong {
 .lead {
   font-size: 1.5rem;
   color: #797979;
+  line-height: $spacer*1.429;
+  margin-bottom: $spacer*.5;
 }
 
 .text-md {
