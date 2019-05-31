@@ -61,15 +61,22 @@ p {
 }
 
 .h2, h2 {
-  font-size: 1.8rem;
-  line-height: $spacer*1.7;
+  font-size: 1.5rem;
+  line-height: $spacer*1.46;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.8rem;
+    line-height: $spacer*1.7;
+  }
 }
 
 .display-5 {
-  font-size: 2.65rem; //40px
+  font-size: 2.22rem;
   font-weight: 700;
   color: $body-color;
   font-family: $font-family-serif;
+  @include media-breakpoint-up(sm) {
+    font-size: 2.65rem;
+  }
 }
 
 strong {
@@ -110,10 +117,14 @@ strong {
 }
 
 .lead {
-  font-size: 1.5rem;
+  font-size: 1.333rem;
   color: #797979;
-  line-height: $spacer*1.429;
+  line-height: $spacer*1.286;
   margin-bottom: $spacer*.5;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.5rem;
+    line-height: $spacer*1.429;
+  }
 }
 
 .text-md {
@@ -166,4 +177,8 @@ strong {
 .long-txt-fix {
   overflow-wrap: break-word;
   hyphens: auto;
+}
+
+ul {
+  margin-bottom: $spacer;
 }
