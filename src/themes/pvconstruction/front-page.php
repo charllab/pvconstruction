@@ -8,13 +8,13 @@
 get_header(); ?>
 
     <main>
-        <div class="bg-primary bg-cover pt-3 pt-lg-7 pt-xxl-11 pb-2"
+        <div class="bg-primary bg-cover pt-3 pt-lg-7 pt-xxl-8 pb-2"
              style="background-image: url(<?php the_field('banner_image')['sizes']['large']; ?>);">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-10 text-center text-white">
                         <h1 class="text-capitalize display-5 text-white mb-0"><?php the_field('banner_header'); ?></h1>
-                        <p class="lead text-white mb-2 mb-lg-4 mb-xxl-8"><?php the_field('banner_subline'); ?></p>
+                        <p class="lead text-white mb-2 mb-lg-4 mb-xxl-5"><?php the_field('banner_subline'); ?></p>
                         <a href="#content" class="scrollable-anchor header-anchor mt-2">
                             <img src="<?php bloginfo('template_url'); ?>/images/goto-arrow.svg" alt=" "
                                  class="goto-arrow-svg">
