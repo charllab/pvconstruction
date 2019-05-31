@@ -19,9 +19,9 @@ if (!function_exists('enqueue_scripts')) {
     function enqueue_scripts()
     {
         wp_enqueue_script('jquery', false, array(), false, false);
-        wp_enqueue_style('style_file', get_stylesheet_directory_uri().'/style/style.css', [], '1.0.0');
-        wp_enqueue_script('header_js', get_stylesheet_directory_uri().'/js/header-bundle.js', null, '1.0.0', false);
-        wp_enqueue_script('footer_js', get_stylesheet_directory_uri().'/js/footer-bundle.js', null, '1.0.0', true);
+        wp_enqueue_style('style_file', get_stylesheet_directory_uri().'/style/style.css', [], '1.0.1');
+        wp_enqueue_script('header_js', get_stylesheet_directory_uri().'/js/header-bundle.js', null, '1.0.1', false);
+        wp_enqueue_script('footer_js', get_stylesheet_directory_uri().'/js/footer-bundle.js', null, '1.0.1', true);
     }
 }
 
@@ -61,38 +61,6 @@ if (!function_exists('admin_init')) {
     }
 
     add_action('admin_init', 'remove_posts_menu');
-
-
-    /* change POST title  */
-//    function change_post_label() {
-//        global $menu;
-//        global $submenu;
-//        $menu[5][0] = 'Events';
-//        $submenu['edit.php'][5][0] = 'Events';
-//        $submenu['edit.php'][10][0] = 'Add Events';
-//        $submenu['edit.php'][16][0] = 'Events Tags';
-//    }
-//    function change_post_object() {
-//        global $wp_post_types;
-//        $labels = &$wp_post_types['post']->labels;
-//        $labels->name = 'Events';
-//        $labels->singular_name = 'Events';
-//        $labels->add_new = 'Add Events';
-//        $labels->add_new_item = 'Add Events';
-//        $labels->edit_item = 'Edit Events';
-//        $labels->new_item = 'Events';
-//        $labels->view_item = 'View Events';
-//        $labels->search_items = 'Search Events';
-//        $labels->not_found = 'No Events found';
-//        $labels->not_found_in_trash = 'No Events found in Trash';
-//        $labels->all_items = 'All Events';
-//        $labels->menu_name = 'Events';
-//        $labels->name_admin_bar = 'Events';
-//    }
-//
-//    add_action( 'admin_menu', 'change_post_label' );
-//    add_action( 'init', 'change_post_object' );
-
 }
 
 function custom_after_setup_theme()
