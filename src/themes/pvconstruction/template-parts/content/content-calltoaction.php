@@ -1,5 +1,5 @@
 <div class="bg-info bg-cover py-3"
-     style="background-image: url(<?php bloginfo('template_url'); ?>/images/placeholder-img-1920x768.png;);">
+     style="background-image: url(<?php the_field('contactcta_img', 'option')['sizes']['large']; ?>);">
     <div class="container">
         <div class="row justify-content-start">
             <div class="col-xxl-6 text-white callout__textblock">

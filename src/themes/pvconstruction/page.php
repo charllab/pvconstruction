@@ -6,7 +6,7 @@ get_header();
 
     <?php if (is_page([1717])) : ?>
         <div class="bg-info bg-cover py-3 pt-xl-6 pb-xl-7 topbanner__marginpullup--servicespage"
-             style="background-image: url(<?php bloginfo('template_url'); ?>/images/placeholder-img-1920x768.png;);">
+             style="background-image: url(<?php the_field('banner_image')['sizes']['large']; ?>);">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-10 text-center text-white">
