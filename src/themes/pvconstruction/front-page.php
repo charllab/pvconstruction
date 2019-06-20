@@ -8,8 +8,12 @@
 get_header(); ?>
 
     <main>
-        <div class="bg-primary bg-cover pt-3 pt-lg-7 pt-xxl-8 pb-2"
+        <div class="bg-primary bg-cover pt-3 pt-lg-7 pt-xxl-8 pb-2 position-relative video-banner"
              style="background-image: url(<?php the_field('banner_image')['sizes']['large']; ?>);">
+            <video autoplay muted loop id="pvcVideo" class="d-none d-lg-block">
+                <source src="<?php the_field('banner_video'); ?>" type="video/mp4">
+            </video>
+            <div class="banner__color-overlay"></div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-10 text-center text-white">

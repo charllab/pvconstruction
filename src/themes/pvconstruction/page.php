@@ -5,8 +5,9 @@ get_header();
 <main>
 
     <?php if (is_page([1717])) : ?>
-        <div class="bg-info bg-cover py-3 pt-xl-6 pb-xl-7 topbanner__marginpullup--servicespage"
+        <div class="bg-info bg-cover py-3 pt-xl-6 pb-xl-7 topbanner__marginpullup--servicespage position-relative"
              style="background-image: url(<?php the_field('banner_image')['sizes']['large']; ?>);">
+            <div class="banner__color-overlay"></div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-10 text-center text-white">
