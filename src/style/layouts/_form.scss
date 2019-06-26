@@ -19,14 +19,11 @@
 
   .gform_footer {
     margin: 1.5rem 0 0 0;
+    padding: 0;
   }
 
   .textarea.small {
     height: 100px;
-  }
-
-  label {
-    font-size: 90%;
   }
 
   .gform_ajax_spinner {
@@ -66,9 +63,9 @@
   .gfield_label {
     line-height: 1;
     margin-top: 0;
-    color: $tertiary;
+    color: $primary;
     font-weight: 500;
-    font-size: .8rem;
+    font-size: 1.125rem;
     margin-bottom: $spacer*.35;
   }
 }
@@ -79,8 +76,8 @@
   @extend .alert-success;
 }
 
-#gform_wrapper_1 {
-  margin-top: 2rem;
+#gform_wrapper_1,
+#gform_wrapper_2 {
   @extend .gravity-forms-disabled-styles;
 
   label {
@@ -110,7 +107,8 @@
   }
 }
 
-.btn-success, #gform_wrapper_1 .gform_button {
+.btn-success, #gform_wrapper_1 .gform_button
+.btn-success, #gform_wrapper_2 .gform_button {
   background-color: $gfrom-btn;
 
   &:hover {
@@ -122,7 +120,8 @@
   }
 }
 
-#gform_wrapper_1 .gform_footer {
+#gform_wrapper_1 .gform_footer
+#gform_wrapper_2 .gform_footer {
   text-align: left !important;
 }
 
@@ -195,12 +194,14 @@
 label {
   font-family: $font-family-sans-serif;
   margin-bottom: 0;
-  font-size: .777777778rem; //14px
+  font-size: 1.25rem; //14px
 }
 
 .form-control,
 #gform_wrapper_1 .ginput_container input,
-#gform_wrapper_1 .ginput_container textarea {
+#gform_wrapper_2 .ginput_container input,
+#gform_wrapper_1 .ginput_container textarea
+#gform_wrapper_2 .ginput_container textarea {
   border-radius: 0px;
   border-color: $primary;
 }
@@ -245,27 +246,34 @@ $placeholder: #b8b8b8;
   }
 }
 
-body #gform_wrapper_1 .gform_footer input[type=submit] {
+body #gform_wrapper_1 .gform_footer input[type=submit],
+body #gform_wrapper_2 .gform_footer input[type=submit] {
   @extend .btn;
-  @extend .btn-secondary;
+  @extend .btn-primary;
+  margin-right: auto;
+  display: block;
 }
 
-body #gform_wrapper_1 .gform_body .gform_fields .gfield {
+body #gform_wrapper_1 .gform_body .gform_fields .gfield,
+body #gform_wrapper_2 .gform_body .gform_fields .gfield {
   margin-top: 0;
 }
 
 
-body #gform_wrapper_1 .gform_body .gform_fields .gfield input[type=text] {
+body #gform_wrapper_1 .gform_body .gform_fields .gfield input[type=text],
+body #gform_wrapper_2 .gform_body .gform_fields .gfield input[type=text] {
   height: 3rem;
   line-height: 1;
 }
 
-body #gform_wrapper_1 .gform_body .gform_fields .gfield_error {
+body #gform_wrapper_1 .gform_body .gform_fields .gfield_error,
+body #gform_wrapper_2 .gform_body .gform_fields .gfield_error {
   color: $tertiary;
 }
 
 
-body #gform_wrapper_1 .gform_body .gform_fields .gfield .ginput_container_select {
+body #gform_wrapper_1 .gform_body .gform_fields .gfield .ginput_container_select,
+body #gform_wrapper_2 .gform_body .gform_fields .gfield .ginput_container_select {
   border: 1px solid #404040;
   height: 54px;
   overflow: hidden;
@@ -301,5 +309,16 @@ body #gform_wrapper_1 .gform_body .gform_fields .gfield .ginput_container_select
   select:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 #000;
+  }
+}
+
+body #gform_wrapper_2 .gform_body .gform_fields .gfield .gfield_radio {
+  input {
+    display: inline-block;
+  }
+  label {
+    font-size: 1rem;
+    line-height: 1;
+    margin-top: 10px;
   }
 }
