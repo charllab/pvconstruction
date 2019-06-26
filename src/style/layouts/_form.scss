@@ -26,6 +26,10 @@
     height: 100px;
   }
 
+  label {
+    font-size: 90%;
+  }
+
   .gform_ajax_spinner {
     position: absolute;
     margin-left: 1rem;
@@ -65,7 +69,7 @@
     margin-top: 0;
     color: $primary;
     font-weight: 500;
-    font-size: 1.125rem;
+    font-size: .8rem;
     margin-bottom: $spacer*.35;
   }
 }
@@ -249,7 +253,7 @@ $placeholder: #b8b8b8;
 body #gform_wrapper_1 .gform_footer input[type=submit],
 body #gform_wrapper_2 .gform_footer input[type=submit] {
   @extend .btn;
-  @extend .btn-primary;
+  @extend .btn-secondary;
   margin-right: auto;
   display: block;
 }
