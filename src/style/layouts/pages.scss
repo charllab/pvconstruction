@@ -168,9 +168,8 @@
 // ----- Owl-carousel -----
 
 .owl-carousel {
-  margin-bottom: 10px;
-  @media (min-width: 768px) {
-    margin-bottom: 30px;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 0;
   }
 }
 
@@ -201,8 +200,8 @@ $owl-lgg: lighten($owl-col, 10%);
   height: $owl-btn;
   border-radius: 0;
   margin-top: 0;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 0;
+  margin-right: 0;
 
   &:hover {
     background-color: $owl-lgg;
@@ -354,6 +353,35 @@ iframe {
   }
 }
 
+.service__content-column {
+  margin-bottom: $spacer;
+}
+
+.service__content-row:nth-child(odd) {
+  .service__content-column--text {
+    @include media-breakpoint-up(md) {
+      order: 2;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-left: $spacer*2;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-left: $spacer*4;
+    }
+  }
+}
+
+.service__content-row:nth-child(even) {
+  .service__content-column--text {
+    @include media-breakpoint-up(lg) {
+      padding-right: $spacer*2;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-right: $spacer*4;
+    }
+  }
+}
+
 // pingpong
 #pingPong {
   @include media-breakpoint-up(md) {
@@ -430,21 +458,6 @@ ul.fa-checkicons {
   }
   @include media-breakpoint-up(lg) {
     padding-right: $spacer*2.145;
-  }
-}
-
-.service-row {
-  margin-top: $spacer;
-
-  &:not(:last-of-type) {
-    margin-bottom: $spacer;
-  }
-
-  @include media-breakpoint-up(md) {
-    margin-top: $spacer*2.5;
-    &:not(:last-of-type) {
-      margin-bottom: $spacer*2.5;
-    }
   }
 }
 

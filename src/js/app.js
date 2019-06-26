@@ -10,14 +10,6 @@ jQuery(function () {
     + website
     + ')|(localhost:\\d{4})|(\\/.*))(\\/.*)?$', '');
 
-  jQuery('a').filter(function () {
-      var href = jQuery(this).attr('href');
-      return !internalLinkRegex.test(href);
-    })
-    .each(function () {
-      jQuery(this).attr('target', '_blank');
-    });
-
   // date picker
   if (jQuery('.datePickW input').length) {
     jQuery('.datePickW input').daterangepicker({
@@ -37,11 +29,11 @@ jQuery(function () {
   });
 
   // owl carousel
-  jQuery('.owl-carousel').owlCarousel({
+  jQuery('.services-carousel').owlCarousel({
     loop: true,
     nav: true,
     navText: ['', ''],
-    autoplay: true,
+    autoplay: false,
     slideSpeed: 2000,
     autoplaySpeed: 2000,
     items: 1,
