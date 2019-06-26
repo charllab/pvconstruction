@@ -46,6 +46,7 @@ get_header(); ?>
 
         <div class="seperator__border--top">
             <div class="py-2">
+                <a id="gf" class="gform_anchor"></a>
                 <?php get_template_part('template-parts/content/content', 'contactus'); ?>
             </div>
         </div><!-- seperator__border--top -->

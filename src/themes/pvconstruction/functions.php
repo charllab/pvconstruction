@@ -65,6 +65,8 @@ if (!function_exists('admin_init')) {
 
 function custom_after_setup_theme()
 {
+    // add gravity forms confirmation anchor
+    add_filter( 'gform_confirmation_anchor', '__return_true' );
     add_image_size( 'homepagebanner', 1920, 490, true, array('center','center') );
     add_image_size( 'homepageserving', 1920, 780, true, array('center','center') );
     add_image_size( 'homepageserving', 768, 434, true, array('center','center') );
