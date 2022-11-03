@@ -6,7 +6,9 @@
             <?php $removethese = array("(", " ", ")", "-"); ?>
             <ul class="list-unstyled">
                 <li><strong>Phone:</strong> <a href="tel:+1<?php echo str_replace($removethese, "", get_field('primary_number', 'option')); ?>"><?php echo get_field('primary_number', 'option'); ?></a></li>
+                <?php if(the_field('primary_email', 'option')) { ?>
                 <li><strong>Email:</strong> <a href="mailto:<?php echo get_field('primary_email', 'option'); ?>"><?php echo get_field('primary_email', 'option'); ?></a></li>
+                <?php }; ?>
             </ul>
         </div><!-- col -->
         <div class="col-xl-7 pl-xl-3">
