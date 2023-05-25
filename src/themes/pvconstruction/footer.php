@@ -26,7 +26,7 @@
                     ]); ?>
                 </div>
                 <div class="col-lg-5 text-center text-lg-right">
-                    <p class="mb-0 mb-lg-1">Designed, Developed and Hosted by <a href="https://sproing.ca/" target="_blank">Sproing&nbsp;Creative</a>
+                    <p class="mb-0 mb-lg-1">Designed, Developed and Hosted by <a href="https://sproing.ca/" target="_blank">Sproing&nbsp;Creative.</a>
                     </p>
                 </div>
             </div>
