@@ -9,6 +9,6 @@ node_modules
 tmp*
 dist/
 
-public/wordpress
-public/latest.zip
+public_html/wordpress
+public_html/latest.zip
 src/plugins/*
