@@ -1,5 +1,15 @@
 jQuery(function () {
 
+  jQuery('.js-gallery').each(function() { // the containers for all your galleries
+    jQuery(this).magnificPopup({
+      delegate: 'a', // the selector for gallery item
+      type: 'image',
+      gallery: {
+        enabled:true
+      }
+    });
+  });
+
   // remove WP Block element iframe classes
   if (jQuery('.wp-block-embed-youtube').length) {
     jQuery('.wp-block-embed-youtube').removeClass().addClass('embed-responsive-item');

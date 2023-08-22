@@ -4,14 +4,12 @@
   display: none;
 }
 
-
-
 // ******* #logoLeftButtonsRight *******
 
 #logoLeftButtonsRight {
   // opening tag
   border-top: 6px solid $secondary;
-  box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.15);
 
   .navbar {
     padding: ($spacer)-6 15px $spacer;
@@ -75,7 +73,7 @@
 
     .dropdown .caret {
       position: absolute;
-      top: 50%;
+      top: 45%;
       right: .5rem;
       margin-top: -.6rem;
     }
@@ -85,7 +83,6 @@
       border-radius: 0;
       border: none;
       right: 0;
-      left: auto;
 
       > .menu-item > .nav-link {
         padding: .75rem 1.5rem;
@@ -101,18 +98,35 @@
 
     .dropdown-menu {
       display: block;
-      text-align: center;
+      text-align: left;
 
       background: none;
       border: none;
       margin: 0;
-      padding: 0;
+      padding: 0 0 0 12px;
+      position: relative;
+      &:before {
+        position: absolute;
+        left: 8px;
+        content: '';
+        width: 4px;
+        height: 100%;
+        background-color: lighten($dark, 75%);
+      }
     }
 
     .dropdown-toggle {
-      text-align: center;
+      text-align: left;
     }
   }
 
   // closing tag
 }
+
+.dropup, .dropright, .dropdown, .dropleft {
+  padding-right: 15px;
+}
+.dropdown-menu {
+  font-size: .8rem;
+}
+

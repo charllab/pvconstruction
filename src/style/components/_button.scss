@@ -58,3 +58,12 @@ button, .btn {
 .is-style-squared .wp-block-button__link {
   @extend .btn;
 }
+
+.alm-load-more-btn.btn.btn-primary {
+  background-color: #404040;
+  font-size: 1.25rem;
+  padding: 1rem 2rem 0.788888889rem;
+  line-height: 1.5;
+  height: auto;
+  border-radius: 0;
+}
